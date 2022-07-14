@@ -1,9 +1,18 @@
 //navbar
 let navbar = document.querySelector(".nav");
-let show= document.querySelector("section");
-window.onscroll = () => {
-    navbar.classList.toggle("stiky",window.scrollY >= show.offsetTop+2)
-};
+let showstiky = document.querySelector("section");
+let nav_scroll = (window.onscroll = () => {
+  navbar.classList.toggle("stiky", window.scrollY >= showstiky.offsetTop + 2);
+
+  if (window.scrollY >= showstiky.offsetTop + 2) {
+    navbar.style.cssText = "position:fixed ; animation: show-nav .3s linear;";
+  } else {
+    navbar.style.cssText = "position :absolute";
+  }
+  if (window.scrollY == 0) {
+    navbar.style.cssText = "animation: show-nav-0px .3s linear;";
+  }
+});
 let icon = document.querySelector(".icon");
 let ul_links = document.querySelector("ul");
 let icon_spans = document.querySelectorAll(".icon span");
@@ -25,9 +34,6 @@ icon.addEventListener("click", () => {
       "width: 80%; transform-origin: left 0%; transform: rotate(0deg);";
   }
 });
-
-//------
-
 //footer year
 let footerYear = document.querySelector(".end-footer .year");
 window.onload = () => {

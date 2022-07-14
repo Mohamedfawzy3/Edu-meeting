@@ -1,1 +1,1 @@
-show=document.querySelector(".header-meeting")
+showstiky=document.querySelector(".header-meeting")

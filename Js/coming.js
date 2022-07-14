@@ -1,4 +1,4 @@
-show=document.querySelector(".header-meeting")
+showstiky = document.querySelector(".header-meeting");
 let allElements = document.querySelectorAll(".box");
 let soonElements = document.querySelectorAll(".soon");
 let importantElements = document.querySelectorAll(".important");
