@@ -289,7 +289,7 @@ a {
     padding-top: 10px;
   }
   .header .container .text {
-    width: auto;
+    width: 93%;
   }
 }
 .header .container .text p {
@@ -337,7 +337,8 @@ a {
   position: relative;
 }
 .coming_meeting .container .parent {
-  top: -130px;
+  top: -160px;
+  padding-top: 50px;
 }
 .coming_meeting .container .info .box {
   background-image: url(../images/service-item-bg.jpg);
@@ -351,8 +352,9 @@ a {
   max-height: 280px;
 }
 @media (max-width: 991px) {
-  .coming_meeting .container .info {
+  .coming_meeting .container .parent {
     top: 0px;
+ 
   }
   .coming_meeting .container .info .box {
     min-width: calc(98% / 2);
