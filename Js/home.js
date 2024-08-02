@@ -21,24 +21,30 @@ apply_now_dislay_click.forEach((click) => {
     });
   });
 });
+
+let about = document.querySelector(".about");
 let about_spans = document.querySelectorAll(
   ".about .container .BOX .content .box div span"
 );
-let about = document.querySelector(".about");
-let conditon = false;
+// let max_number = 0;
+// about_spans.forEach((span) => {
+//   if (parseInt(span.dataset.reach) >= max_number) {
+//     max_number = +span.dataset.reach;
+//   }
+//   console.log(max_number);
+// });
+let condition = false;
 window.addEventListener("scroll", () => {
-  if (window.scrollY > about.offsetTop && !conditon) {
-    console.log("at position");
+  if (window.scrollY > about.offsetTop && !condition) {
     about_spans.forEach((span) => {
-      let stop = span.dataset.reach;
-      console.log(stop);
+      let stop = parseInt(span.dataset.reach);
       let count = setInterval(() => {
         span.textContent++;
-        if (span.textContent == stop) {
+        if (parseInt(span.textContent) == stop) {
           clearInterval(count);
         }
-      }, 6000 / stop);
+      }, 8000 / stop);
     });
+    condition = true;
   }
-  conditon = true;
 });

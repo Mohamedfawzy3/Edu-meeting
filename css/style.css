@@ -110,7 +110,6 @@ a {
   box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
   transition: var(--main-transation);
   width: 200px;
-
   position: absolute;
   top: calc(100% + 50px);
   display: none;
@@ -354,7 +353,6 @@ a {
 @media (max-width: 991px) {
   .coming_meeting .container .parent {
     top: 0px;
- 
   }
   .coming_meeting .container .info .box {
     min-width: calc(98% / 2);

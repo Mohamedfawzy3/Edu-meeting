@@ -14,11 +14,14 @@ let nav_scroll = (window.onscroll = () => {
   }
 });
 let icon = document.querySelector(".icon");
-let ul_links = document.querySelector("ul");
+let ul_links = document.querySelector(".links ul");
 let icon_spans = document.querySelectorAll(".icon span");
-console.log(icon);
+console.log(icon)
 icon.addEventListener("click", () => {
-  if (ul_links.style.display == "none") {
+  
+  console.log("clicked toggle icon", ul_links.style.display)
+
+  if (ul_links.style.display == "none"||ul_links.style.display =="") {
     ul_links.style.display = "block";
     icon_spans[1].style.opacity = "0";
     icon_spans[0].style.cssText =
